@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #050b14;
+    --bg-soft: #08111f;
+    --text: #f4f7fb;
+    --muted: #8fa3b8;
+    --primary: #26d9d0;
+  }
+}
+
+/* Fondo con rejilla cibernética idéntico a tensiva.cl */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+}
+
+/* Efecto Glow Neón */
+.glow-primary {
+  box-shadow: 0 0 25px rgba(38, 217, 208, 0.4);
+}
+
+.text-glow-primary {
+  text-shadow: 0 0 15px rgba(38, 217, 208, 0.5);
+}
+
+/* Tarjeta de Cristal Glassmorphism */
+.glass-card {
+  background: rgba(8, 17, 31, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(38, 217, 208, 0.18);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(12, 25, 46, 0.85);
+  border-color: rgba(38, 217, 208, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(38, 217, 208, 0.25);
+  transform: translateY(-2px);
+}
