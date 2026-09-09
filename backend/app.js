@@ -1,15 +1,22 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const apiRoutes = require('./routes');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middlewares
 app.use(cors()); // Permite peticiones desde el frontend
 app.use(express.json());
 
-// Ruta de prueba
-app.get('/api/estado', (req, res) => {
-    res.json({ mensaje: 'El backend está funcionando correctamente' });
+// Rutas modulares bajo /api
+app.use('/api', apiRoutes);
+
+// Manejo de rutas no encontradas
+app.use((req, res) => {
+    res.status(404).json({ ok: false, mensaje: 'Ruta no encontrada' });
 });
 
-app.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
-});
+app.listen(PORT, () => {
+    console.log(` Servidor Tensiva corriendo en http://localhost:${PORT}`);
+});
