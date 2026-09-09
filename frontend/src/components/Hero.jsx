@@ -36,7 +36,7 @@ export default function Hero({ onNavigate }) {
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <button
             onClick={() => onNavigate('contacto', 'Proyecto de ingeniería')}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-base flex items-center justify-center gap-3 hover:bg-[#34e8de] hover:shadow-[0_0_30px_rgba(38,217,208,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-base flex items-center justify-center gap-3 hover:bg-[#1ebcb4] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
           >
             <span>Cuéntanos tu proyecto</span>
             <ArrowRight className="w-5 h-5" />
