@@ -50,3 +50,61 @@
   box-shadow: 0 10px 30px -10px rgba(38, 217, 208, 0.25);
   transform: translateY(-2px);
 }
+
+/* Animación de apertura suave para el Chatbot */
+@keyframes chatSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-chat-open {
+  animation: chatSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Resaltado temporal para secciones navegadas interactivamente */
+@keyframes sectionPulseHighlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(38, 217, 208, 0);
+    outline: 2px solid rgba(38, 217, 208, 0);
+  }
+  20% {
+    box-shadow: 0 0 40px 6px rgba(38, 217, 208, 0.4);
+    outline: 2px solid rgba(38, 217, 208, 0.75);
+  }
+  80% {
+    box-shadow: 0 0 40px 6px rgba(38, 217, 208, 0.4);
+    outline: 2px solid rgba(38, 217, 208, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(38, 217, 208, 0);
+    outline: 2px solid rgba(38, 217, 208, 0);
+  }
+}
+
+.highlight-section-active {
+  animation: sectionPulseHighlight 2.4s ease-out forwards;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Barra de desplazamiento personalizada para la ventana de chat */
+.chat-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(38, 217, 208, 0.2);
+  border-radius: 9999px;
+}
+.chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(38, 217, 208, 0.5);
+}
+
