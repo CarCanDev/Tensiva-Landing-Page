@@ -4,6 +4,8 @@ import ConstellationCanvas from './components/ConstellationCanvas';
 import Hero from './components/Hero';
 import Nosotros from './components/Nosotros';
 import Soluciones from './components/Soluciones';
+import Navbar from './components/Navbar';
+import Chatbot from './components/Chatbot/Chatbot';
 
 export default function App() {
   const [selectedMotivo, setSelectedMotivo] = useState('Proyecto de ingeniería');
@@ -15,6 +17,14 @@ export default function App() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+
+      // Efecto visual de resaltado momentáneo
+      element.classList.remove('highlight-section-active');
+      void element.offsetWidth;
+      element.classList.add('highlight-section-active');
+      setTimeout(() => {
+        element.classList.remove('highlight-section-active');
+      }, 2600);
     }
   };
 
@@ -132,6 +142,9 @@ export default function App() {
           </div>
         </footer>
       </main>
+
+      {/* Asistente virtual y chatbot interactivo */}
+      <Chatbot onNavigate={handleNavigate} />
     </div>
   );
 }
