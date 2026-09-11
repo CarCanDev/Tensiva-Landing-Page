@@ -53,10 +53,27 @@ export default function ConstellationCanvas() {
       });
     }
 
+    // Estado para la estrella fugaz ocasional
+    let shootingStar = null;
+
+    const createShootingStar = () => {
+      const angle = (Math.PI / 4) + (Math.random() * 0.2 - 0.1); // ~45 grados hacia abajo a la derecha
+      const speed = Math.random() * 8 + 10;
+      return {
+        x: Math.random() * width * 0.8,
+        y: Math.random() * height * 0.5,
+        dx: Math.cos(angle) * speed,
+        dy: Math.sin(angle) * speed,
+        length: Math.random() * 120 + 100,
+        alpha: 1,
+        fadeSpeed: Math.random() * 0.015 + 0.01,
+      };
+    };
+
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Actualizar y dibujar partículas
+      // Actualizar y dibujar partículas estáticas/nodos
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.x += p.vx;
@@ -106,6 +123,58 @@ export default function ConstellationCanvas() {
             ctx.lineWidth = 1;
             ctx.stroke();
           }
+        }
+      }
+
+      // Lógica de la Estrella Fugaz ocasional
+      if (!shootingStar) {
+        // Probabilidad sutil de aparición (aprox. cada 8 a 15 segundos a 60fps)
+        if (Math.random() < 0.0025) {
+          shootingStar = createShootingStar();
+        }
+      } else {
+        // Avanzar posición de la estrella fugaz
+        shootingStar.x += shootingStar.dx;
+        shootingStar.y += shootingStar.dy;
+        shootingStar.alpha -= shootingStar.fadeSpeed;
+
+        if (
+          shootingStar.alpha <= 0 ||
+          shootingStar.x > width + 200 ||
+          shootingStar.y > height + 200
+        ) {
+          shootingStar = null;
+        } else {
+          // Calcular la cola de la estrella
+          const tailX = shootingStar.x - (shootingStar.dx / Math.hypot(shootingStar.dx, shootingStar.dy)) * shootingStar.length;
+          const tailY = shootingStar.y - (shootingStar.dy / Math.hypot(shootingStar.dx, shootingStar.dy)) * shootingStar.length;
+
+          // Dibujar trazo en degradado de luz neón
+          const gradient = ctx.createLinearGradient(
+            shootingStar.x,
+            shootingStar.y,
+            tailX,
+            tailY
+          );
+          gradient.addColorStop(0, `rgba(255, 255, 255, ${shootingStar.alpha})`);
+          gradient.addColorStop(0.3, `rgba(38, 217, 208, ${shootingStar.alpha * 0.8})`);
+          gradient.addColorStop(1, 'rgba(38, 217, 208, 0)');
+
+          ctx.beginPath();
+          ctx.moveTo(shootingStar.x, shootingStar.y);
+          ctx.lineTo(tailX, tailY);
+          ctx.strokeStyle = gradient;
+          ctx.lineWidth = 1.8;
+          ctx.shadowBlur = 12;
+          ctx.shadowColor = '#26d9d0';
+          ctx.stroke();
+          ctx.shadowBlur = 0; // reset
+
+          // Cabeza brillante de la estrella fugaz
+          ctx.beginPath();
+          ctx.arc(shootingStar.x, shootingStar.y, 1.5, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${shootingStar.alpha})`;
+          ctx.fill();
         }
       }
 
