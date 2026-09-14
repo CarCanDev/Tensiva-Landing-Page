@@ -98,8 +98,6 @@ export default function CordiaFunciones() {
             const scale = Math.max(0.75, 1 - absOffset * 0.12);
             const opacity = isCurrent ? 1 : Math.max(0, 0.45 - (absOffset - 1) * 0.35);
             const zIndex = 30 - absOffset * 10;
-            const blur = isCurrent ? 0 : 3;
-
             return (
               <div
                 key={func.id}
@@ -108,9 +106,8 @@ export default function CordiaFunciones() {
                   transform: `translate3d(${translateX}px, 0, 0) scale(${scale})`,
                   opacity: opacity,
                   zIndex: zIndex,
-                  filter: `blur(${blur}px)`,
-                  willChange: 'transform, opacity, filter',
-                  transition: 'transform 750ms cubic-bezier(0.16, 1, 0.3, 1), opacity 750ms cubic-bezier(0.16, 1, 0.3, 1), filter 750ms cubic-bezier(0.16, 1, 0.3, 1)',
+                  willChange: 'transform, opacity',
+                  transition: 'transform 600ms cubic-bezier(0.16, 1, 0.3, 1), opacity 600ms cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
                 className={`absolute w-full max-w-xl glass-card p-8 sm:p-10 rounded-3xl border text-left cursor-pointer select-none ${
                   isCurrent 
