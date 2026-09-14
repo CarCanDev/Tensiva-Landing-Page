@@ -195,10 +195,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                   <div>
                     <span className="text-xs text-[#8fa3b8] font-mono block">Atención técnica</span>
                     <a
-                      href="tel:+56912345678"
+                      href="tel:+56935118136"
                       className="text-sm font-semibold text-[#f4f7fb] hover:text-[#26d9d0] transition-colors"
                     >
-                      +56 9 8400 9234 / Santiago, Chile
+                      +56 9 3511 8136 / Santiago, Chile
                     </a>
                   </div>
                 </div>
@@ -311,11 +311,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                           placeholder="Ej: Juan Pérez"
                           value={formData.nombre}
                           onChange={handleInputChange}
-                          className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${
-                            fieldErrors.nombre
+                          className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.nombre
                               ? 'border-red-500/70 focus:border-red-500'
                               : 'border-white/10 focus:border-[#26d9d0]'
-                          }`}
+                            }`}
                         />
                       </div>
                       {fieldErrors.nombre && (
@@ -353,11 +352,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         placeholder="correo@empresa.cl"
                         value={formData.correo}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${
-                          fieldErrors.correo
+                        className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.correo
                             ? 'border-red-500/70 focus:border-red-500'
                             : 'border-white/10 focus:border-[#26d9d0]'
-                        }`}
+                          }`}
                       />
                       {fieldErrors.correo && (
                         <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
@@ -393,11 +391,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       placeholder="Cuéntanos brevemente sobre las líneas de vida de tu faena, el tipo de operación o la solución de ingeniería que buscas implementar..."
                       value={formData.mensaje}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all resize-none ${
-                        fieldErrors.mensaje
+                      className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all resize-none ${fieldErrors.mensaje
                           ? 'border-red-500/70 focus:border-red-500'
                           : 'border-white/10 focus:border-[#26d9d0]'
-                      }`}
+                        }`}
                     />
                     {fieldErrors.mensaje && (
                       <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
@@ -420,11 +417,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                     <button
                       type="submit"
                       disabled={status === 'loading'}
-                      className={`w-full py-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 transform ${
-                        status === 'loading'
+                      className={`w-full py-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 transform ${status === 'loading'
                           ? 'bg-[#26d9d0]/50 text-[#050b14] cursor-not-allowed'
                           : 'bg-[#26d9d0] hover:bg-[#1ebcb4] text-[#050b14] hover:-translate-y-0.5 shadow-lg shadow-[#26d9d0]/20 hover:shadow-[#26d9d0]/40 cursor-pointer'
-                      }`}
+                        }`}
                     >
                       {status === 'loading' ? (
                         <>
