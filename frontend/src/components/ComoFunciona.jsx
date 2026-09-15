@@ -1,5 +1,6 @@
 import React from 'react';
 import { Activity, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
+import CordiaScreenMockup from './CordiaScreenMockup';
 
 export default function ComoFunciona() {
   const pasos = [
@@ -58,7 +59,7 @@ export default function ComoFunciona() {
         </div>
 
         {/* Flujo 1-2-3 con tarjetas conectadas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-16">
           {/* Línea conectora visual visible en pantallas desktop */}
           <div className="hidden md:block absolute top-1/2 left-[18%] right-[18%] h-[2px] bg-gradient-to-r from-[#26d9d0]/40 via-[#26d9d0]/20 to-[#26d9d0]/40 -translate-y-12 -z-0" />
 
@@ -110,6 +111,27 @@ export default function ComoFunciona() {
           })}
         </div>
 
+        {/* Showcase de Pantalla: Consola del Operador en Acción */}
+        <div className="max-w-4xl mx-auto my-12">
+          <div className="text-center mb-6">
+            <span className="text-xs font-mono uppercase text-[#26d9d0] tracking-wider">
+              Paso 03 en Pantalla
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#f4f7fb] mt-1">
+              Consola de Despacho y Respuesta Inmediata
+            </h3>
+            <p className="text-sm text-[#8fa3b8] max-w-xl mx-auto mt-1">
+              El operador visualiza la alerta, reproduce los segundos críticos de video y confirma el estado en tiempo real.
+            </p>
+          </div>
+
+          <CordiaScreenMockup
+            screenKey="caidas"
+            aspectRatio="aspect-[16/9]"
+            className="shadow-2xl border-[#26d9d0]/30"
+          />
+        </div>
+
         {/* Resumen de integración al pie del flujo */}
         <div className="mt-12 p-5 rounded-xl glass-card border border-white/10 max-w-3xl mx-auto text-center flex flex-col sm:flex-row items-center justify-center gap-3">
           <span className="w-2.5 h-2.5 rounded-full bg-[#26d9d0] animate-pulse shrink-0" />
@@ -122,3 +144,4 @@ export default function ComoFunciona() {
     </section>
   );
 }
+
