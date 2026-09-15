@@ -1,0 +1,77 @@
+/**
+ * Mapeo oficial de Pantallas y Capturas de la Plataforma CORDIA
+ * Archivos ubicados en 'frontend/src/assets/cordia/'
+ */
+
+export const CORDIA_SCREENS = {
+  dashboard: {
+    id: 'dashboard',
+    fileName: 'cordia-dashboard.png',
+    path: 'src/assets/cordia/cordia-dashboard.png',
+    title: 'Consola Central de Operaciones',
+    subtitle: 'Supervisión en tiempo real de líneas de vida, estado de faena y alertas',
+    badge: 'CONSOLA PRINCIPAL',
+    category: 'Dashboard',
+    description: 'Vista global con indicadores clave (KPIs), telemetría en vivo de la línea de vida, estado de sensores y distribución de incidentes en tiempo real.',
+  },
+  tension: {
+    id: 'tension',
+    fileName: 'cordia-telemetria-tension.png',
+    path: 'src/assets/cordia/cordia-telemetria-tension.png',
+    title: 'Monitoreo y Telemetría de Tensión',
+    subtitle: 'Lectura continua de esfuerzo mecánico y reloj analógico de carga',
+    badge: 'TELEMETRÍA EN TIEMPO REAL',
+    category: 'Telemetría',
+    description: 'Gráfico en vivo de fuerza en los últimos 60 segundos, tacómetro analógico con rangos de advertencia y ficha técnica del anclaje.',
+  },
+  caidas: {
+    id: 'caidas',
+    fileName: 'cordia-alertas-caidas.png',
+    path: 'src/assets/cordia/cordia-alertas-caidas.png',
+    title: 'Detección de Caídas y Videoverificación',
+    subtitle: 'Disparo de alerta inmediata, streaming visual y protocolo de emergencia',
+    badge: 'ALERTA INMEDIATA',
+    category: 'Seguridad',
+    description: 'Notificación instantánea ante eventos de sobretensión crítica con reproductor de video en directo y datos de contacto de emergencia de faena.',
+  },
+  cambiosTension: {
+    id: 'cambiosTension',
+    fileName: 'cordia-variaciones-tension.png',
+    path: 'src/assets/cordia/cordia-variaciones-tension.png',
+    title: 'Detección de Cambios de Tensión',
+    subtitle: 'Identificación de cuerda floja, tirones y variaciones progresivas',
+    badge: 'VARIACIÓN MECÁNICA',
+    category: 'Mantenimiento',
+    description: 'Registro histórico de tirones mecánicos y clasificación automática de eventos: cuerda floja, baja tensión y picos de sobrecarga por impacto.',
+  },
+  mapa: {
+    id: 'mapa',
+    fileName: 'cordia-mapa-faena.png',
+    path: 'src/assets/cordia/cordia-mapa-faena.png',
+    title: 'Georreferenciación y Mapa de Faena',
+    subtitle: 'Ubicación cartográfica en tiempo real de todas las líneas de vida',
+    badge: 'GEORREFERENCIACIÓN',
+    category: 'Cartografía',
+    description: 'Visor cartográfico interactivo que ubica geográficamente cada línea de vida en faena, permitiendo filtrar por estado normal o en alerta.',
+  },
+  lineasDeVida: {
+    id: 'lineasDeVida',
+    fileName: 'cordia-inventario-lineas.png',
+    path: 'src/assets/cordia/cordia-inventario-lineas.png',
+    title: 'Gestión Centralizada de Líneas de Vida',
+    subtitle: 'Inventario general, estado de red IoT y telemetría por equipo',
+    badge: 'CONSOLA UNIFICADA',
+    category: 'Operaciones',
+    description: 'Panel de control con el listado completo de líneas instaladas, fuerza actual registrada, intensidad de señal de red y estado de conexión PLC.',
+  },
+  historial: {
+    id: 'historial',
+    fileName: 'cordia-historial-impactos.png',
+    path: 'src/assets/cordia/cordia-historial-impactos.png',
+    title: 'Historial y Auditoría de Impactos',
+    subtitle: 'Trazabilidad forense completa de sobrecargas y eventos de caída',
+    badge: 'AUDITORÍA FORENSE',
+    category: 'Auditoría',
+    description: 'Registro cronológico detallado con conteo de impactos (hasta 526 kg), duración de evento y fecha exacta para reportes de prevención de riesgos.',
+  },
+};
