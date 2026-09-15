@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import TensivaLogo from './TensivaLogo';
 
 export default function Navbar({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,16 +50,12 @@ export default function Navbar({ onNavigate }) {
         }`}
       >
         <div className="flex items-center justify-between">
-          {/* Logo Tensiva */}
+          {/* Logo Tensiva Oficial */}
           <button
             onClick={() => handleLinkClick('inicio')}
             className="flex items-center gap-3 group focus:outline-none cursor-pointer"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#26d9d0] to-[#0d6e6a] flex items-center justify-center p-0.5 shadow-md shadow-[#26d9d0]/20 group-hover:shadow-[#26d9d0]/50 transition-all duration-300">
-              <div className="w-full h-full bg-[#050b14] rounded-[10px] flex items-center justify-center">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#26d9d0] shadow-[0_0_10px_#26d9d0] animate-pulse" />
-              </div>
-            </div>
+            <TensivaLogo className="w-11 h-14 sm:w-12 sm:h-16 group-hover:scale-105 transition-transform" />
             <div className="flex flex-col text-left">
               <span className="text-xl font-bold tracking-wider text-[#f4f7fb] group-hover:text-[#26d9d0] transition-colors">
                 TENSIVA
@@ -90,7 +87,7 @@ export default function Navbar({ onNavigate }) {
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleLinkClick('contacto', 'Consulta general')}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm hover:bg-[#1ebcb4] transition-all duration-200 transform hover:-translate-y-0.5 shadow-md shadow-[#26d9d0]/20 hover:shadow-[#26d9d0]/40 cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm hover:bg-[#1ebcb4] transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
             >
               <span>Contacto</span>
               <ArrowRight className="w-4 h-4" />
@@ -127,7 +124,7 @@ export default function Navbar({ onNavigate }) {
             <div className="pt-2">
               <button
                 onClick={() => handleLinkClick('contacto', 'Consulta general')}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm hover:bg-[#1ebcb4] transition-all shadow-md shadow-[#26d9d0]/20 cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm hover:bg-[#1ebcb4] transition-all cursor-pointer"
               >
                 <span>Contacto</span>
                 <ArrowRight className="w-4 h-4" />

@@ -44,18 +44,18 @@ export default function CordiaIntro({ onNavigate }) {
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
               <button
                 onClick={() => onNavigate('contacto', 'Plataforma CORDIA')}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#1ebcb4] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#26d9d0] text-[#050b14] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#1ebcb4] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer group"
               >
                 <span>Solicitar una demostración</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 transform group-hover:translate-x-1" />
               </button>
 
               <button
                 onClick={() => onNavigate('contacto', 'Plataforma CORDIA')}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl glass-card text-[#f4f7fb] font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#08111f] hover:border-[#26d9d0]/30 transition-all duration-300 border border-white/10 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl glass-card text-[#f4f7fb] font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#08111f] hover:border-[#26d9d0]/30 transition-all duration-300 border border-white/10 cursor-pointer group"
               >
                 <span>Consultar por CORDIA</span>
-                <Sparkles className="w-4 h-4 text-[#26d9d0]" />
+                <Sparkles className="w-4 h-4 text-[#26d9d0] transition-all duration-300 transform group-hover:-translate-y-1.5 group-hover:scale-125 group-hover:rotate-12" />
               </button>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUp, Mail, Phone, MapPin, ShieldCheck, Heart } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
+import TensivaLogo from './TensivaLogo';
 
 export default function Footer({ onNavigate }) {
   const scrollToTop = () => {
@@ -23,11 +24,7 @@ export default function Footer({ onNavigate }) {
           {/* Columna 1 y 2: Identidad Tensiva */}
           <div className="lg:col-span-2 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#26d9d0] to-[#0d6e6a] flex items-center justify-center p-0.5 shadow-md shadow-[#26d9d0]/20">
-                <div className="w-full h-full bg-[#050b14] rounded-[10px] flex items-center justify-center">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#26d9d0] shadow-[0_0_10px_#26d9d0] animate-pulse" />
-                </div>
-              </div>
+              <TensivaLogo className="w-12 h-16" />
               <div className="flex flex-col text-left">
                 <span className="text-xl font-bold tracking-wider text-[#f4f7fb]">
                   TENSIVA
