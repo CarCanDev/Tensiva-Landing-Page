@@ -1,5 +1,6 @@
 import React from 'react';
-import { Search, Compass, Cpu, CheckCircle2 } from 'lucide-react';
+import { Search, Compass, Cpu, CheckCircle2, Users, Check } from 'lucide-react';
+import stock3 from '../assets/stock3.jpg';
 
 export default function Metodologia() {
   const etapas = [
@@ -44,7 +45,7 @@ export default function Metodologia() {
         </div>
 
         {/* Grid de 4 Etapas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {etapas.map((etapa, index) => {
             const Icon = etapa.icon;
             return (
@@ -78,6 +79,51 @@ export default function Metodologia() {
               </div>
             );
           })}
+        </div>
+
+        {/* Banner de Acompañamiento e Integración con el Equipo (stock3) */}
+        <div className="glass-card rounded-3xl border border-white/10 p-6 sm:p-10 relative overflow-hidden group">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#26d9d0]/10 border border-[#26d9d0]/25 text-[#26d9d0] text-xs font-mono tracking-wider uppercase">
+                <Users className="w-3.5 h-3.5" />
+                <span>Colaboración en Terreno</span>
+              </div>
+              
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#f4f7fb] tracking-tight">
+                Ingeniería integrada con las <span className="text-[#26d9d0]">personas de tu faena</span>
+              </h3>
+
+              <p className="text-sm sm:text-base text-[#8fa3b8] leading-relaxed font-normal">
+                Cada desarrollo de Tensiva contempla la realidad operativa de tu personal. Acompañamos a tus supervisores, prevencionistas y operadores desde la evaluación inicial hasta la adopción continua de los sistemas en faena.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono text-[#26d9d0]">
+                <span className="inline-flex items-center gap-1.5 bg-white/05 px-3 py-1.5 rounded-lg border border-white/05">
+                  <Check className="w-3.5 h-3.5 text-[#26d9d0]" /> Capacitación técnica directa
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-white/05 px-3 py-1.5 rounded-lg border border-white/05">
+                  <Check className="w-3.5 h-3.5 text-[#26d9d0]" /> Soporte y acompañamiento continuo
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-white/10 group-hover:border-[#26d9d0]/30 transition-all shadow-lg shadow-[#050b14]">
+              <img
+                src={stock3}
+                alt="Colaboración y red de ingeniería Tensiva"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050b14] via-[#050b14]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#08111f]/60 via-transparent to-transparent hidden lg:block" />
+              
+              <span className="absolute bottom-3 right-3 text-[10px] font-mono uppercase px-2.5 py-1 rounded-full bg-[#050b14]/85 text-[#26d9d0] border border-[#26d9d0]/30 backdrop-blur-md">
+                Red Operacional & Equipo
+              </span>
+            </div>
+
+          </div>
         </div>
 
       </div>
