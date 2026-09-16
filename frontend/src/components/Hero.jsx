@@ -44,10 +44,10 @@ export default function Hero({ onNavigate }) {
 
           <button
             onClick={() => onNavigate('cordia')}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-[#f4f7fb] font-medium text-base flex items-center justify-center gap-2 hover:bg-[#08111f] hover:border-[#26d9d0]/40 transition-all duration-300 border border-white/10 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-[#f4f7fb] font-medium text-base flex items-center justify-center gap-2 hover:bg-[#08111f] hover:border-[#26d9d0]/40 transition-all duration-300 border border-white/10 cursor-pointer group"
           >
             <span>Conocer CORDIA</span>
-            <Sparkles className="w-4 h-4 text-[#26d9d0]" />
+            <Sparkles className="w-4 h-4 text-[#26d9d0] transition-all duration-300 transform group-hover:-translate-y-1.5 group-hover:scale-125 group-hover:rotate-12" />
           </button>
         </div>
       </div>
