@@ -312,12 +312,12 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         <input
                           type="text"
                           name="nombre"
-                          placeholder="Ej: Juan Pérez"
+                          placeholder="Ej: Saúl Galleguillos"
                           value={formData.nombre}
                           onChange={handleInputChange}
                           className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.nombre
-                              ? 'border-red-500/70 focus:border-red-500'
-                              : 'border-white/10 focus:border-[#26d9d0]'
+                            ? 'border-red-500/70 focus:border-red-500'
+                            : 'border-white/10 focus:border-[#26d9d0]'
                             }`}
                         />
                       </div>
@@ -357,8 +357,8 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         value={formData.correo}
                         onChange={handleInputChange}
                         className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.correo
-                            ? 'border-red-500/70 focus:border-red-500'
-                            : 'border-white/10 focus:border-[#26d9d0]'
+                          ? 'border-red-500/70 focus:border-red-500'
+                          : 'border-white/10 focus:border-[#26d9d0]'
                           }`}
                       />
                       {fieldErrors.correo && (
@@ -376,7 +376,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       <input
                         type="tel"
                         name="telefono"
-                        placeholder="+56 9 1234 5678"
+                        placeholder="+56 9 3511 8136"
                         value={formData.telefono}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border border-white/10 text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:border-[#26d9d0] focus:outline-none transition-all"
@@ -396,8 +396,8 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       value={formData.mensaje}
                       onChange={handleInputChange}
                       className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all resize-none ${fieldErrors.mensaje
-                          ? 'border-red-500/70 focus:border-red-500'
-                          : 'border-white/10 focus:border-[#26d9d0]'
+                        ? 'border-red-500/70 focus:border-red-500'
+                        : 'border-white/10 focus:border-[#26d9d0]'
                         }`}
                     />
                     {fieldErrors.mensaje && (
@@ -426,8 +426,8 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         setTimeout(() => setIsFlying(false), 700);
                       }}
                       className={`w-full py-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 transform relative overflow-hidden ${status === 'loading'
-                          ? 'bg-[#26d9d0]/50 text-[#050b14] cursor-not-allowed'
-                          : 'bg-[#26d9d0] hover:bg-[#1ebcb4] text-[#050b14] hover:-translate-y-0.5 cursor-pointer'
+                        ? 'bg-[#26d9d0]/50 text-[#050b14] cursor-not-allowed'
+                        : 'bg-[#26d9d0] hover:bg-[#1ebcb4] text-[#050b14] hover:-translate-y-0.5 cursor-pointer'
                         }`}
                     >
                       {status === 'loading' ? (
@@ -438,11 +438,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       ) : (
                         <>
                           <span>Enviar mensaje a ingeniería</span>
-                          <Send className={`w-4 h-4 transition-all duration-700 ease-out transform ${
-                            isFlying 
-                              ? 'translate-x-16 -translate-y-16 opacity-0 scale-125' 
-                              : 'translate-x-0 translate-y-0 opacity-100 scale-100'
-                          }`} />
+                          <Send className={`w-4 h-4 transition-all duration-700 ease-out transform ${isFlying
+                            ? 'translate-x-16 -translate-y-16 opacity-0 scale-125'
+                            : 'translate-x-0 translate-y-0 opacity-100 scale-100'
+                            }`} />
                         </>
                       )}
                     </button>

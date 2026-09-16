@@ -1,6 +1,7 @@
 import React from 'react';
 import { Wrench, Network, LayoutDashboard, Settings2, ArrowRight, Cpu, Activity, ShieldCheck } from 'lucide-react';
 import stock2 from '../assets/stock2.jpg';
+import stock4 from '../assets/stock4.jpg';
 
 export default function Soluciones({ onNavigate }) {
   return (
@@ -65,12 +66,25 @@ export default function Soluciones({ onNavigate }) {
           {/* Card 2 Bento: Tecnología IoT (5 Cols) */}
           <div className="md:col-span-5 glass-card glass-card-hover p-8 rounded-3xl border border-white/05 flex flex-col justify-between relative group">
             <div>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-[#26d9d0]/10 text-[#26d9d0] flex items-center justify-center border border-[#26d9d0]/20">
                   <Network className="w-6 h-6" />
                 </div>
                 <span className="text-[11px] font-mono px-2.5 py-1 rounded bg-[#26d9d0]/10 text-[#26d9d0] uppercase">
                   BENTO 02 · IoT
+                </span>
+              </div>
+
+              {/* Imagen decorativa stock4 (Sensores IoT y hardware conectado) */}
+              <div className="relative h-36 sm:h-40 w-full rounded-2xl overflow-hidden mb-5 border border-white/10 group-hover:border-[#26d9d0]/30 transition-all">
+                <img
+                  src={stock4}
+                  alt="Instalación de sensores IoT y hardware técnico Tensiva"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08111f] via-[#08111f]/30 to-transparent" />
+                <span className="absolute bottom-2.5 left-3 text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-[#050b14]/85 text-[#26d9d0] border border-[#26d9d0]/30 backdrop-blur-md">
+                  Hardware & Sensores
                 </span>
               </div>
 
