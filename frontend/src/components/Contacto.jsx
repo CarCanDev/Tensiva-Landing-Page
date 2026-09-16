@@ -437,7 +437,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         </>
                       ) : (
                         <>
-                          <span>Enviar mensaje a ingeniería</span>
+                          <span>Enviar mensaje</span>
                           <Send className={`w-4 h-4 transition-all duration-700 ease-out transform ${isFlying
                             ? 'translate-x-16 -translate-y-16 opacity-0 scale-125'
                             : 'translate-x-0 translate-y-0 opacity-100 scale-100'
