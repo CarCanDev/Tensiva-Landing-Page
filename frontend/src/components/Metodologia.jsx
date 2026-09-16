@@ -32,14 +32,14 @@ export default function Metodologia() {
 
   return (
     <section id="metodologia" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 border-t border-white/05 bg-[#050b14]/60">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
 
         {/* Header de la sección */}
         <div className="text-center mb-16">
           <span className="text-[#26d9d0] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-3 block">
             CÓMO TRABAJAMOS EN TENSIVA
           </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight">
+          <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight">
             Una solución definida a partir de <span className="text-[#26d9d0]">tu operación</span>
           </h2>
         </div>

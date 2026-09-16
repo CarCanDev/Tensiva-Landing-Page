@@ -10,7 +10,7 @@ export default function Hero({ onNavigate }) {
         <div className="absolute inset-24 border border-[#26d9d0]/05 rounded-full" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
         {/* Badge superior estilo Tensiva */}
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border border-[#26d9d0]/30 mb-8 backdrop-blur-md shadow-lg shadow-[#26d9d0]/10 hover:border-[#26d9d0]/50 transition-colors">
           <span className="w-2.5 h-2.5 rounded-full bg-[#26d9d0] shadow-[0_0_12px_#26d9d0] animate-pulse" />
@@ -20,7 +20,7 @@ export default function Hero({ onNavigate }) {
         </div>
 
         {/* Titular Principal */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#f4f7fb] leading-[1.1] mb-6">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-[#f4f7fb] leading-[1.1] mb-6">
           Ingeniería y tecnología para{' '}
           <span className="text-[#26d9d0] text-glow-primary inline-block">
             supervisar tu operación
@@ -28,7 +28,7 @@ export default function Hero({ onNavigate }) {
         </h1>
 
         {/* Descripción de la portada */}
-        <p className="text-base sm:text-xl text-[#8fa3b8] max-w-3xl leading-relaxed mb-10 font-normal">
+        <p className="text-base sm:text-xl text-[#8fa3b8] max-w-5xl leading-relaxed mb-10 font-normal">
           Desarrollamos soluciones de ingeniería e IoT que conectan equipos, sensores y plataformas para transformar los datos de terreno en información útil. Acompañamos a las empresas con soluciones y servicios adaptados a sus necesidades técnicas y operativas.
         </p>
 

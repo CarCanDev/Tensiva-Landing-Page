@@ -39,7 +39,7 @@ export default function Beneficios({ onNavigate }) {
 
   return (
     <section id="beneficios" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 border-t border-white/05">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         {/* Encabezado de la Sección 7 */}
         <div className="text-center mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#26d9d0]/10 border border-[#26d9d0]/25 text-[#26d9d0] text-xs font-mono tracking-widest uppercase mb-4">
@@ -47,7 +47,7 @@ export default function Beneficios({ onNavigate }) {
             <span>BENEFICIOS DE CORDIA</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight leading-tight mb-4">
             Ventajas operativas para la{' '}
             <span className="text-[#26d9d0] inline-block">
               seguridad en altura

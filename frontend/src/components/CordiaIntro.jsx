@@ -7,7 +7,7 @@ export default function CordiaIntro({ onNavigate }) {
 
   return (
     <section id="cordia" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 border-t border-white/05 bg-[#050b14]/70">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
 
         {/* Badge e Introducción de CORDIA */}
         <div className="text-center mb-16">
@@ -18,7 +18,7 @@ export default function CordiaIntro({ onNavigate }) {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight max-w-4xl mx-auto leading-tight">
+          <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight max-w-5xl mx-auto leading-tight">
             Monitoreo de líneas de vida con{' '}
             <span className="text-[#26d9d0] inline-block">
               detección de caídas y alertas automáticas
