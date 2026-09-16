@@ -11,47 +11,53 @@ export default function FAQ({ onNavigate }) {
   const preguntas = [
     {
       numero: '01',
-      categoria: 'Ecosistema CORDIA',
-      pregunta: '¿Qué es CORDIA y en qué se diferencia de una línea de vida tradicional?',
+      categoria: 'Tensiva',
+      pregunta: '¿A qué se dedica Tensiva?',
       respuesta:
-        'CORDIA es una solución tecnológica integral que complementa las líneas de vida existentes mediante sensores IoT de tensión mecánica, algoritmos de detección inmediata de caídas y un panel de control centralizado. A diferencia de un cable pasivo tradicional que solo actúa físicamente al momento del impacto sin avisar a nadie, CORDIA monitorea de forma continua el esfuerzo mecánico del cable y emite alertas en tiempo real ante sobrecargas, aflojamientos o caídas en faena.',
+        'Tensiva desarrolla soluciones de ingeniería e IoT y presta servicios asociados a las necesidades técnicas de sus clientes.',
     },
     {
       numero: '02',
-      categoria: 'Detección & Algoritmos',
-      pregunta: '¿Cómo diferencian los sensores una caída de las tensiones normales de trabajo?',
+      categoria: 'CORDIA',
+      pregunta: '¿Qué es CORDIA?',
       respuesta:
-        'Nuestros algoritmos analizan la curva dinámica de carga en milisegundos. Las labores rutinarias de faena (desplazamiento del trabajador, tracción leve, vibraciones o ráfagas de viento) generan patrones de esfuerzo progresivos y controlados. En contraste, una caída libre provoca un gradiente de aceleración y sobretensión brusco con una firma espectral inconfundible, lo que permite disparar la alarma de emergencia automáticamente sin falsos positivos.',
+        'Es una plataforma de Tensiva para supervisar líneas de vida mediante monitoreo de tensión, detección automática de caídas, alertas y video.',
     },
     {
       numero: '03',
-      categoria: 'Compatibilidad en Terreno',
-      pregunta: '¿Es compatible con líneas de vida e infraestructura ya instaladas en nuestra empresa?',
+      categoria: 'Detección de Caídas',
+      pregunta: '¿CORDIA detecta caídas automáticamente?',
       respuesta:
-        'Sí, absolutamente. El hardware de CORDIA ha sido diseñado con un enfoque no invasivo: los sensores de tensión se instalan directamente en los anclajes o terminales del cable de acero existente. No es necesario reemplazar la línea de vida actual ni alterar sus certificaciones estructurales originales, lo que minimiza drásticamente los costos y tiempos de implementación.',
+        'Sí. El sistema cuenta con detección automática de caídas y genera alertas para informar al personal encargado.',
     },
     {
       numero: '04',
-      categoria: 'Conectividad & Faenas Aisladas',
-      pregunta: '¿Cómo opera la conectividad en faenas remotas o sectores con señal intermitente?',
+      categoria: 'Monitoreo de Tensión',
+      pregunta: '¿También detecta cambios de tensión?',
       respuesta:
-        'Cada nodo sensor opera con arquitectura "Edge Computing" y memoria local protegida. Si la faena sufre una pérdida temporal de cobertura celular o enlace inalámbrico industrial, los sensores continúan registrando y analizando datos localmente en tiempo real. En cuanto se restablece el enlace, sincronizan de forma transparente todo el registro de eventos con el panel central sin pérdida de información.',
+        'Sí. CORDIA monitorea la tensión de la línea, identifica cambios y genera alertas para su revisión.',
     },
     {
       numero: '05',
-      categoria: 'Video-verificación',
-      pregunta: '¿Se integra la plataforma con las cámaras de seguridad o CCTV existentes en el sitio?',
+      categoria: 'Videomonitoreo',
+      pregunta: '¿Para qué sirve el videomonitoreo?',
       respuesta:
-        'Sí. CORDIA puede vincularse con sistemas de videovigilancia en faena para sincronizar la marca temporal exacta de un evento de tensión o caída con el registro visual de la cámara más cercana. De este modo, el supervisor en la sala de control puede verificar visualmente la situación en segundos antes de enviar asistencia o activar planes de rescate.',
+        'Permite al operador observar el área supervisada y complementar las mediciones al evaluar un evento.',
     },
     {
       numero: '06',
-      categoria: 'Mantenimiento & Batería',
-      pregunta: '¿Qué requerimientos de mantenimiento y calibración tienen los sensores de tensión?',
+      categoria: 'Implementación',
+      pregunta: '¿Cómo se implementa CORDIA en mi operación?',
       respuesta:
-        'Los sensores cuentan con encapsulado de grado industrial (norma IP67/IP68), resistentes a la intemperie, polvo, humedad y vibraciones severas. Su electrónica de ultra bajo consumo ofrece una autonomía prolongada. Para garantizar la máxima precisión técnica, recomendamos una inspección periódica y una calibración anual supervisada por el equipo de ingeniería de Tensiva.',
+        'El equipo de Tensiva evalúa las líneas de vida y las condiciones del lugar para definir la configuración y el alcance de la solución.',
     },
-
+    {
+      numero: '07',
+      categoria: 'Proyectos a Medida',
+      pregunta: '¿Puedo consultar por un proyecto distinto de CORDIA?',
+      respuesta:
+        'Sí. Cuéntanos qué necesitas medir, monitorear o resolver para evaluar una solución de ingeniería.',
+    },
   ];
 
   return (
@@ -65,14 +71,14 @@ export default function FAQ({ onNavigate }) {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight leading-tight mb-4">
-            Respuestas claras a tus{' '}
+            Sobre Tensiva y{' '}
             <span className="text-[#26d9d0] inline-block">
-              dudas técnicas
+              CORDIA
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-[#8fa3b8] max-w-2xl mx-auto font-normal leading-relaxed">
-            Conoce en detalle cómo la plataforma CORDIA y las soluciones de Tensiva transforman la seguridad y la supervisión de tus faenas.
+            Resolvemos las principales dudas sobre nuestra empresa, el funcionamiento de la plataforma CORDIA y el desarrollo de proyectos de ingeniería.
           </p>
         </div>
 

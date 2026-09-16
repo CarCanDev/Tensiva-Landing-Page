@@ -191,20 +191,11 @@ export default function Footer({ onNavigate }) {
           </div>
         </div>
 
-        {/* Barra Inferior con Botón de Retorno Arriba */}
-        <div className="pt-8 border-t border-white/05 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <p className="text-[#8fa3b8] m-0 text-center sm:text-left">
+        {/* Barra Inferior */}
+        <div className="pt-8 border-t border-white/05 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs">
+          <p className="text-[#8fa3b8] m-0 text-center">
             © {new Date().getFullYear()} <strong className="text-white">Tensiva SpA</strong>. Todos los derechos reservados. Tecnología y Supervisión para Operaciones Críticas.
           </p>
-
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/05 hover:bg-[#26d9d0]/10 border border-white/10 hover:border-[#26d9d0]/30 text-[#8fa3b8] hover:text-[#26d9d0] transition-all cursor-pointer"
-            aria-label="Volver arriba"
-          >
-            <span>Volver arriba</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
         </div>
       </div>
     </footer>

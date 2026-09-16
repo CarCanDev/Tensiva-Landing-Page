@@ -84,27 +84,24 @@ export default function Metodologia() {
         {/* Banner de Acompañamiento e Integración con el Equipo (stock3) */}
         <div className="glass-card rounded-3xl border border-white/10 p-6 sm:p-10 relative overflow-hidden group">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#26d9d0]/10 border border-[#26d9d0]/25 text-[#26d9d0] text-xs font-mono tracking-wider uppercase">
                 <Users className="w-3.5 h-3.5" />
-                <span>Colaboración en Terreno</span>
+                <span>Soluciones de Ingeniería a tu medida</span>
               </div>
-              
+
               <h3 className="text-2xl sm:text-3xl font-bold text-[#f4f7fb] tracking-tight">
-                Ingeniería integrada con las <span className="text-[#26d9d0]">personas de tu faena</span>
+                Ingeniería integrada a tu<span className="text-[#26d9d0]"> Realidad Laboral</span>
               </h3>
 
               <p className="text-sm sm:text-base text-[#8fa3b8] leading-relaxed font-normal">
-                Cada desarrollo de Tensiva contempla la realidad operativa de tu personal. Acompañamos a tus supervisores, prevencionistas y operadores desde la evaluación inicial hasta la adopción continua de los sistemas en faena.
+                Entendemos el terreno en el que trabajas. Por eso cada solución de Tensiva considera tus procesos, infraestructura y equipos existentes, integrándose de manera fluida con tu operación diaria y asegurando una adopción real y efectiva.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono text-[#26d9d0]">
                 <span className="inline-flex items-center gap-1.5 bg-white/05 px-3 py-1.5 rounded-lg border border-white/05">
-                  <Check className="w-3.5 h-3.5 text-[#26d9d0]" /> Capacitación técnica directa
-                </span>
-                <span className="inline-flex items-center gap-1.5 bg-white/05 px-3 py-1.5 rounded-lg border border-white/05">
-                  <Check className="w-3.5 h-3.5 text-[#26d9d0]" /> Soporte y acompañamiento continuo
+                  <Check className="w-3.5 h-3.5 text-[#26d9d0]" /> Acompañamiento y soporte continuo
                 </span>
               </div>
             </div>
@@ -117,7 +114,7 @@ export default function Metodologia() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050b14] via-[#050b14]/30 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#08111f]/60 via-transparent to-transparent hidden lg:block" />
-              
+
               <span className="absolute bottom-3 right-3 text-[10px] font-mono uppercase px-2.5 py-1 rounded-full bg-[#050b14]/85 text-[#26d9d0] border border-[#26d9d0]/30 backdrop-blur-md">
                 Red Operacional & Equipo
               </span>
