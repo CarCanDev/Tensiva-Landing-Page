@@ -78,23 +78,23 @@ export default function CordiaFunciones() {
 
   return (
     <section id="funciones-cordia" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 border-t border-white/05 overflow-hidden">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-[1400px] mx-auto text-center">
 
         {/* Encabezado */}
-        <div className="mb-14">
+        <div className="mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-[#26d9d0]/30 mb-4">
             <span className="w-2 h-2 rounded-full bg-[#26d9d0]" />
             <span className="text-xs font-semibold tracking-[0.2em] text-[#c8f7f4] uppercase">
               FUNCIONES DE CORDIA
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight">
+          <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight">
             Información y alertas para <span className="text-[#26d9d0]">apoyar la supervisión</span>
           </h2>
         </div>
 
         {/* Contenedor del Carrusel Ultra-Suave 60 FPS con Mockups de Pantalla */}
-        <div className="relative min-h-[580px] sm:min-h-[550px] flex items-center justify-center my-8 perspective-1000">
+        <div className="relative min-h-[700px] sm:min-h-[680px] flex items-center justify-center my-8 perspective-1000">
           {funciones.map((func, index) => {
             const Icon = func.icon;
             
@@ -122,7 +122,7 @@ export default function CordiaFunciones() {
                   willChange: 'transform, opacity',
                   transition: 'transform 600ms cubic-bezier(0.16, 1, 0.3, 1), opacity 600ms cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-                className={`absolute w-full max-w-2xl sm:max-w-3xl glass-card p-6 sm:p-8 rounded-3xl border text-left cursor-pointer select-none ${
+                className={`absolute w-full max-w-3xl sm:max-w-4xl glass-card p-6 sm:p-8 rounded-3xl border text-left cursor-pointer select-none ${
                   isCurrent 
                     ? 'border-[#26d9d0]/50 bg-[#08111f]/95 shadow-[0_25px_60px_rgba(0,0,0,0.7)]' 
                     : 'border-white/10 bg-[#050b14]/80'
@@ -179,7 +179,7 @@ export default function CordiaFunciones() {
         </div>
 
         {/* Controles de Navegación Manual */}
-        <div className="flex items-center justify-center gap-6 mt-8">
+        <div className="relative z-10 flex items-center justify-center gap-6 mt-12">
           <button
             onClick={handlePrev}
             className="w-12 h-12 rounded-full glass-card border border-white/10 flex items-center justify-center text-[#f4f7fb] hover:text-[#26d9d0] hover:border-[#26d9d0]/40 transition-all duration-300 cursor-pointer active:scale-95"

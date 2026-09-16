@@ -6,7 +6,7 @@ import stock4 from '../assets/stock4.jpg';
 export default function Soluciones({ onNavigate }) {
   return (
     <section id="soluciones" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 border-t border-white/05">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         
         {/* Encabezado */}
         <div className="text-center mb-16">
@@ -16,7 +16,7 @@ export default function Soluciones({ onNavigate }) {
               NUESTRAS SOLUCIONES
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight">
+          <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight">
             Ingeniería aplicada a tu <span className="text-[#26d9d0]">operación</span>
           </h2>
         </div>
