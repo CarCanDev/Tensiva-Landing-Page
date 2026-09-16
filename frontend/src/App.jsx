@@ -49,20 +49,9 @@ export default function App() {
 
         {/* Sección 3: Nuestras Soluciones (Martín - Completado) */}
         <Soluciones onNavigate={handleNavigate} />
-        
+
         {/* Sección 4: Plataforma CORDIA (Martín - Completado) */}
         <CordiaIntro onNavigate={handleNavigate} />
-
-        {/* Sección 4: Plataforma CORDIA (Martín - Próximo paso) */}
-        <section id="cordia" className="py-20 px-6 border-t border-white/05 max-w-5xl mx-auto text-center">
-          <div className="glass-card p-8 rounded-2xl border border-[#26d9d0]/20">
-            <span className="text-[#26d9d0] text-xs font-mono tracking-widest uppercase">Sección 4 · Asignado a Martín</span>
-            <h3 className="text-2xl font-bold text-[#f4f7fb] mt-2 mb-3">Plataforma CORDIA</h3>
-            <p className="text-[#8fa3b8] text-sm max-w-2xl mx-auto">
-              Monitoreo de líneas de vida con detección de caídas y alertas automáticas. Integra mediciones de tensión y videomonitoreo para supervisar la operación.
-            </p>
-          </div>
-        </section>
 
         {/* Sección 5: Funciones de CORDIA (Martín - Completado) */}
         <CordiaFunciones />

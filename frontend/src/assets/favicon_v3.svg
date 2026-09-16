@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- 1. ONDA DE TENSIÓN SUPERIOR FILOSA CON NODOS EN EXTREMOS -->
+  <path
+    d="M 14 18 L 32 3 L 50 18 L 68 3 L 86 18"
+    stroke="#26d9d0"
+    stroke-width="3.5"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    stroke-miterlimit="5"
+  />
+  <circle cx="14" cy="18" r="4.5" fill="#26d9d0" />
+  <circle cx="86" cy="18" r="4.5" fill="#26d9d0" />
+
+  <!-- 2. BARRA HORIZONTAL SUPERIOR DELGADA Y AFILADA (TRAPEZOIDE) -->
+  <path
+    d="M 26 26 H 74 L 88 33 H 12 Z"
+    fill="#26d9d0"
+  />
+
+  <!-- 3. FIGURA L INVERTIDA IZQUIERDA CON PUNTA HACIA ADENTRO (┌) -->
+  <path
+    d="M 12 39 H 47 V 114 L 39 100 V 47 H 23 L 12 39 Z"
+    fill="#26d9d0"
+  />
+
+  <!-- 4. FIGURA L INVERTIDA DERECHA CON PUNTA HACIA ADENTRO (┐) -->
+  <path
+    d="M 88 39 H 53 V 114 L 61 100 V 47 H 77 L 88 39 Z"
+    fill="#26d9d0"
+  />
+</svg>

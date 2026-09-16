@@ -14,6 +14,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
   const [errorMsg, setErrorMsg] = useState('');
   const [fieldErrors, setFieldErrors] = useState({});
+  const [isFlying, setIsFlying] = useState(false);
 
   // Sincronizar motivo si cambia externamente desde un botón CTA de la web
   useEffect(() => {
@@ -71,8 +72,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsFlying(true);
 
     if (!validate()) {
+      setTimeout(() => setIsFlying(false), 600);
       return;
     }
 
@@ -81,7 +84,6 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
 
     try {
       // Intentar primero con la ruta relativa (/api/contacto) que Vite redirige mediante proxy
-      // y si falla, fallback a localhost:3000
       let response;
       try {
         response = await fetch('/api/contacto', {
@@ -112,9 +114,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
       }
     } catch (err) {
       console.error('Error al conectar con la API de contacto:', err);
-      // Simulación de éxito resiliente con aviso para que en entornos de demostración sin backend no se rompa
       setStatus('error');
       setErrorMsg('No se pudo establecer conexión con el servidor de contacto. Verifica que el backend Node.js esté activo o escríbenos directamente a contacto@tensiva.cl.');
+    } finally {
+      setIsFlying(false);
     }
   };
 
@@ -130,6 +133,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
     setStatus('idle');
     setFieldErrors({});
     setErrorMsg('');
+    setIsFlying(false);
   };
 
   return (
@@ -195,10 +199,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                   <div>
                     <span className="text-xs text-[#8fa3b8] font-mono block">Atención técnica</span>
                     <a
-                      href="tel:+56912345678"
+                      href="tel:+56935118136"
                       className="text-sm font-semibold text-[#f4f7fb] hover:text-[#26d9d0] transition-colors"
                     >
-                      +56 9 8400 9234 / Santiago, Chile
+                      +56 9 3511 8136 / Santiago, Chile
                     </a>
                   </div>
                 </div>
@@ -311,11 +315,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                           placeholder="Ej: Juan Pérez"
                           value={formData.nombre}
                           onChange={handleInputChange}
-                          className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${
-                            fieldErrors.nombre
+                          className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.nombre
                               ? 'border-red-500/70 focus:border-red-500'
                               : 'border-white/10 focus:border-[#26d9d0]'
-                          }`}
+                            }`}
                         />
                       </div>
                       {fieldErrors.nombre && (
@@ -353,11 +356,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                         placeholder="correo@empresa.cl"
                         value={formData.correo}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${
-                          fieldErrors.correo
+                        className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.correo
                             ? 'border-red-500/70 focus:border-red-500'
                             : 'border-white/10 focus:border-[#26d9d0]'
-                        }`}
+                          }`}
                       />
                       {fieldErrors.correo && (
                         <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
@@ -393,11 +395,10 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       placeholder="Cuéntanos brevemente sobre las líneas de vida de tu faena, el tipo de operación o la solución de ingeniería que buscas implementar..."
                       value={formData.mensaje}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all resize-none ${
-                        fieldErrors.mensaje
+                      className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all resize-none ${fieldErrors.mensaje
                           ? 'border-red-500/70 focus:border-red-500'
                           : 'border-white/10 focus:border-[#26d9d0]'
-                      }`}
+                        }`}
                     />
                     {fieldErrors.mensaje && (
                       <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
@@ -420,11 +421,14 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                     <button
                       type="submit"
                       disabled={status === 'loading'}
-                      className={`w-full py-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 transform ${
-                        status === 'loading'
+                      onClick={() => {
+                        setIsFlying(true);
+                        setTimeout(() => setIsFlying(false), 700);
+                      }}
+                      className={`w-full py-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 transform relative overflow-hidden ${status === 'loading'
                           ? 'bg-[#26d9d0]/50 text-[#050b14] cursor-not-allowed'
-                          : 'bg-[#26d9d0] hover:bg-[#1ebcb4] text-[#050b14] hover:-translate-y-0.5 shadow-lg shadow-[#26d9d0]/20 hover:shadow-[#26d9d0]/40 cursor-pointer'
-                      }`}
+                          : 'bg-[#26d9d0] hover:bg-[#1ebcb4] text-[#050b14] hover:-translate-y-0.5 cursor-pointer'
+                        }`}
                     >
                       {status === 'loading' ? (
                         <>
@@ -434,7 +438,11 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       ) : (
                         <>
                           <span>Enviar mensaje a ingeniería</span>
-                          <Send className="w-4 h-4" />
+                          <Send className={`w-4 h-4 transition-all duration-700 ease-out transform ${
+                            isFlying 
+                              ? 'translate-x-16 -translate-y-16 opacity-0 scale-125' 
+                              : 'translate-x-0 translate-y-0 opacity-100 scale-100'
+                          }`} />
                         </>
                       )}
                     </button>

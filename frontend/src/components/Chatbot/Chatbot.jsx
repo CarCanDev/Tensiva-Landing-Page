@@ -181,12 +181,12 @@ export default function Chatbot({ onNavigate }) {
           <div className="px-4 py-3.5 border-b border-white/10 bg-[#060e1a]/80 backdrop-blur-xl flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#26d9d0] to-[#0d6e6a] flex items-center justify-center p-0.5 shadow-md shadow-[#26d9d0]/30">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#26d9d0] to-[#0d6e6a] flex items-center justify-center p-0.5 shadow-md">
                   <div className="w-full h-full bg-[#050b14] rounded-[10px] flex items-center justify-center">
                     <Bot className="w-5 h-5 text-[#26d9d0]" />
                   </div>
                 </div>
-                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 border-2 border-[#050b14] rounded-full shadow-[0_0_8px_#34d399]" />
+                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 border-2 border-[#050b14] rounded-full" />
               </div>
 
               <div className="flex flex-col">
@@ -334,7 +334,7 @@ export default function Chatbot({ onNavigate }) {
       {/* Botón Flotante Principal (FAB) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#26d9d0] to-[#128b85] text-[#050b14] shadow-[0_0_25px_rgba(38,217,208,0.4)] hover:shadow-[0_0_35px_rgba(38,217,208,0.6)] transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#26d9d0] to-[#128b85] text-[#050b14] shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
         aria-label={isOpen ? 'Cerrar asistente virtual' : 'Abrir asistente virtual de Tensiva'}
       >
         {isOpen ? (
@@ -344,7 +344,7 @@ export default function Chatbot({ onNavigate }) {
             <MessageSquare className="w-6 h-6" />
             {/* Indicador brillante superior */}
             <span className="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-[#050b14] flex items-center justify-center">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_#34d399]" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
             </span>
           </>
         )}

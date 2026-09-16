@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Activity, AlertTriangle, Gauge, Video, Layers, FileSearch, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Activity, AlertTriangle, Gauge, MapPin, Layers, FileSearch, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import CordiaScreenMockup from './CordiaScreenMockup';
 
 export default function CordiaFunciones() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,51 +8,63 @@ export default function CordiaFunciones() {
   const funciones = [
     {
       id: '01',
+      screenKey: 'tension',
+      fileName: 'cordia-telemetria-tension.png',
       icon: Activity,
-      title: 'Monitoreo de tensión',
-      description: 'Supervisa la tensión de las líneas de vida y consulta sus mediciones desde la plataforma.',
-      badge: 'SENSORES CABLE',
-      detail: 'Lectura continua de esfuerzo mecánico en tiempo real',
+      title: 'Monitoreo de tensión en tiempo real',
+      description: 'Supervisa la curva de esfuerzo mecánico y el reloj de carga (0-80 kg) de cada línea de vida con telemetría en vivo.',
+      badge: 'TELEMETRÍA EN VIVO',
+      detail: 'Gráfica de fuerza últimos 60s y límites de advertencia',
     },
     {
       id: '02',
+      screenKey: 'caidas',
+      fileName: 'cordia-alertas-caidas.png',
       icon: AlertTriangle,
       title: 'Detección automática de caídas',
-      description: 'Identifica eventos de caída y genera alertas para dar aviso al personal encargado de la supervisión.',
+      description: 'Identifica sobretensiones críticas de impacto, activa alertas sonoras/visuales y despliega el streaming de video del área.',
       badge: 'ALERTA INMEDIATA',
-      detail: 'Activación automática de protocolos de aviso',
+      detail: 'Videoverificación en directo y canal de emergencia de faena',
     },
     {
       id: '03',
+      screenKey: 'cambiosTension',
+      fileName: 'cordia-variaciones-tension.png',
       icon: Gauge,
       title: 'Detección de cambios de tensión',
-      description: 'Reconoce variaciones de tensión en la línea y genera alertas que permiten revisar la condición detectada.',
-      badge: 'VARIACIÓN CABLE',
-      detail: 'Monitoreo preventivo de fluctuaciones físicas',
+      description: 'Reconoce variaciones sutiles, condiciones de cuerda floja, baja tensión o tirones continuos para prevenir fallas estructurales.',
+      badge: 'VARIACIÓN MECÁNICA',
+      detail: 'Clasificación de eventos de cuerda floja y sobrecarga',
     },
     {
       id: '04',
-      icon: Video,
-      title: 'Videomonitoreo',
-      description: 'Accede a las imágenes del área supervisada para complementar las mediciones con una referencia visual de lo que ocurre.',
-      badge: 'CAM FEED 24/7',
-      detail: 'Verificación visual simultánea del entorno',
+      screenKey: 'mapa',
+      fileName: 'cordia-mapa-faena.png',
+      icon: MapPin,
+      title: 'Georreferenciación y mapa de faena',
+      description: 'Visualiza la ubicación geográfica exacta de todas las líneas de vida en un mapa cartográfico con filtro de estado e incidencias.',
+      badge: 'MAPA EN TIEMPO REAL',
+      detail: 'Localización espacial inmediata para equipos de rescate',
     },
     {
       id: '05',
+      screenKey: 'lineasDeVida',
+      fileName: 'cordia-inventario-lineas.png',
       icon: Layers,
-      title: 'Consulta integrada',
-      description: 'Reúne información de tensión, alertas y video en una misma plataforma para facilitar el trabajo del operador.',
+      title: 'Gestión unificada de líneas de vida',
+      description: 'Consola central con el inventario completo de equipos instalados, estado de enlace PLC, potencia de señal de red y fuerza actual.',
       badge: 'CONSOLA UNIFICADA',
-      detail: 'Centralización de variables operativas en un solo panel',
+      detail: 'Monitoreo de disponibilidad IoT y estado por equipo',
     },
     {
       id: '06',
+      screenKey: 'historial',
+      fileName: 'cordia-historial-impactos.png',
       icon: FileSearch,
-      title: 'Evaluación de eventos',
-      description: 'Utiliza las mediciones y las imágenes para comprender la situación ante una alerta y apoyar la evaluación del incidente.',
-      badge: 'REVISIÓN DE INCIDENTES',
-      detail: 'Datos objetivos para el análisis posterior al evento',
+      title: 'Auditoría forense e historial de eventos',
+      description: 'Registro histórico completo con trazabilidad de impactos (hasta 526 kg), fecha y duración para informes de prevención de riesgos.',
+      badge: 'AUDITORÍA FORENSE',
+      detail: 'Registro cronológico con más de 100 eventos documentados',
     },
   ];
 
@@ -80,8 +93,8 @@ export default function CordiaFunciones() {
           </h2>
         </div>
 
-        {/* Contenedor del Carrusel Ultra-Suave 60 FPS */}
-        <div className="relative min-h-[400px] sm:min-h-[350px] flex items-center justify-center my-8 perspective-1000">
+        {/* Contenedor del Carrusel Ultra-Suave 60 FPS con Mockups de Pantalla */}
+        <div className="relative min-h-[580px] sm:min-h-[550px] flex items-center justify-center my-8 perspective-1000">
           {funciones.map((func, index) => {
             const Icon = func.icon;
             
@@ -94,9 +107,9 @@ export default function CordiaFunciones() {
             const isCurrent = offset === 0;
 
             // Transiciones con aceleración por hardware (GPU)
-            const translateX = offset * 280; // Desplazamiento horizontal fluido en píxeles
-            const scale = Math.max(0.75, 1 - absOffset * 0.12);
-            const opacity = isCurrent ? 1 : Math.max(0, 0.45 - (absOffset - 1) * 0.35);
+            const translateX = offset * 320; // Desplazamiento horizontal fluido en píxeles
+            const scale = Math.max(0.72, 1 - absOffset * 0.12);
+            const opacity = isCurrent ? 1 : Math.max(0, 0.4 - (absOffset - 1) * 0.3);
             const zIndex = 30 - absOffset * 10;
             return (
               <div
@@ -109,41 +122,51 @@ export default function CordiaFunciones() {
                   willChange: 'transform, opacity',
                   transition: 'transform 600ms cubic-bezier(0.16, 1, 0.3, 1), opacity 600ms cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-                className={`absolute w-full max-w-xl glass-card p-8 sm:p-10 rounded-3xl border text-left cursor-pointer select-none ${
+                className={`absolute w-full max-w-2xl sm:max-w-3xl glass-card p-6 sm:p-8 rounded-3xl border text-left cursor-pointer select-none ${
                   isCurrent 
-                    ? 'border-[#26d9d0]/50 bg-[#08111f]/95 shadow-[0_20px_50px_rgba(0,0,0,0.6)]' 
+                    ? 'border-[#26d9d0]/50 bg-[#08111f]/95 shadow-[0_25px_60px_rgba(0,0,0,0.7)]' 
                     : 'border-white/10 bg-[#050b14]/80'
                 }`}
               >
                 {/* Header de la Tarjeta */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border transition-colors duration-500 ${
-                    isCurrent ? 'bg-[#26d9d0]/15 text-[#26d9d0] border-[#26d9d0]/30' : 'bg-white/5 text-[#8fa3b8] border-white/10'
-                  }`}>
-                    <Icon className="w-7 h-7" />
-                  </div>
+                <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-xs px-3 py-1 rounded-full bg-[#26d9d0]/10 text-[#26d9d0] font-mono tracking-wider">
-                      {func.badge}
-                    </span>
-                    <span className="text-sm font-mono text-[#8fa3b8]">
-                      [{func.id}/06]
-                    </span>
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border transition-colors duration-500 ${
+                      isCurrent ? 'bg-[#26d9d0]/15 text-[#26d9d0] border-[#26d9d0]/30' : 'bg-white/5 text-[#8fa3b8] border-white/10'
+                    }`}>
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#f4f7fb]">
+                        {func.title}
+                      </h3>
+                      <span className="text-xs font-mono text-[#26d9d0]">
+                        {func.badge}
+                      </span>
+                    </div>
                   </div>
+
+                  <span className="text-sm font-mono text-[#8fa3b8]">
+                    [{func.id}/{String(funciones.length).padStart(2, '0')}]
+                  </span>
                 </div>
 
-                {/* Título & Descripción */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-[#f4f7fb] mb-3">
-                    {func.title}
-                  </h3>
-                  <p className="text-[#8fa3b8] text-base leading-relaxed font-normal">
-                    {func.description}
-                  </p>
+                {/* Descripción */}
+                <p className="text-[#8fa3b8] text-sm sm:text-base leading-relaxed font-normal mb-4">
+                  {func.description}
+                </p>
+
+                {/* Slot de Captura de Pantalla CORDIA */}
+                <div className="my-4">
+                  <CordiaScreenMockup
+                    screenKey={func.screenKey}
+                    aspectRatio="aspect-[16/9]"
+                    className="border-white/10 bg-[#050b14]"
+                  />
                 </div>
 
                 {/* Footer de Tarjeta Activa */}
-                <div className="pt-5 border-t border-white/05 flex items-center justify-between text-xs font-mono text-[#26d9d0]">
+                <div className="pt-4 border-t border-white/05 flex items-center justify-between text-xs font-mono text-[#26d9d0]">
                   <span>{func.detail}</span>
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" />
