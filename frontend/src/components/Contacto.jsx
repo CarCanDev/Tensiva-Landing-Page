@@ -192,7 +192,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#26d9d0]/10 border border-[#26d9d0]/20 flex items-center justify-center text-[#26d9d0] shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
@@ -205,7 +205,7 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                       +56 9 3511 8136 / Santiago, Chile
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#26d9d0]/10 border border-[#26d9d0]/20 flex items-center justify-center text-[#26d9d0] shrink-0">
@@ -344,45 +344,45 @@ export default function Contacto({ selectedMotivo, onMotivoChange }) {
                     </div>
                   </div>
 
-                  {/* Fila: Correo y Teléfono */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#8fa3b8] mb-2">
-                        Correo electrónico <span className="text-[#26d9d0]">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        name="correo"
-                        placeholder="correo@empresa.cl"
-                        value={formData.correo}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.correo
-                          ? 'border-red-500/70 focus:border-red-500'
-                          : 'border-white/10 focus:border-[#26d9d0]'
-                          }`}
-                      />
-                      {fieldErrors.correo && (
-                        <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
-                          <AlertCircle className="w-3.5 h-3.5" />
-                          <span>{fieldErrors.correo}</span>
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider text-[#8fa3b8] mb-2">
-                        Teléfono <span className="text-xs lowercase text-[#8fa3b8]/70">(opcional)</span>
-                      </label>
-                      <input
-                        type="tel"
-                        name="telefono"
-                        placeholder="+56 9 3511 8136"
-                        value={formData.telefono}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border border-white/10 text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:border-[#26d9d0] focus:outline-none transition-all"
-                      />
-                    </div>
+                  {/* Campo: Correo electrónico */}
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-wider text-[#8fa3b8] mb-2">
+                      Correo electrónico <span className="text-[#26d9d0]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="correo"
+                      placeholder="correo@empresa.cl"
+                      value={formData.correo}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:outline-none transition-all ${fieldErrors.correo
+                        ? 'border-red-500/70 focus:border-red-500'
+                        : 'border-white/10 focus:border-[#26d9d0]'
+                        }`}
+                    />
+                    {fieldErrors.correo && (
+                      <p className="text-xs text-red-400 mt-1.5 flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5" />
+                        <span>{fieldErrors.correo}</span>
+                      </p>
+                    )}
                   </div>
+
+                  {/* Campo Teléfono (comentado)
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-wider text-[#8fa3b8] mb-2">
+                      Teléfono <span className="text-xs lowercase text-[#8fa3b8]/70">(opcional)</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="telefono"
+                      placeholder="+56 9 3511 8136"
+                      value={formData.telefono}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 rounded-xl bg-[#050b14]/80 border border-white/10 text-[#f4f7fb] text-sm placeholder-[#8fa3b8]/40 focus:border-[#26d9d0] focus:outline-none transition-all"
+                    />
+                  </div>
+                  */}
 
                   {/* Campo: Mensaje */}
                   <div>
