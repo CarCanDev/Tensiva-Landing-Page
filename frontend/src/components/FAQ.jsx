@@ -70,8 +70,6 @@ export default function FAQ({ onNavigate }) {
             <span>PREGUNTAS FRECUENTES</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#f4f7fb] tracking-tight leading-tight mb-4">
-            Sobre Tensiva y{' '}
           <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold text-[#f4f7fb] tracking-tight leading-tight mb-4">
             Respuestas claras a tus{' '}
             <span className="text-[#26d9d0] inline-block">
@@ -92,8 +90,8 @@ export default function FAQ({ onNavigate }) {
               <div
                 key={item.numero}
                 className={`rounded-2xl transition-all duration-300 border ${isOpen
-                    ? 'bg-[#08111f]/90 border-[#26d9d0]/40'
-                    : 'glass-card border-white/10 hover:border-white/20'
+                  ? 'bg-[#08111f]/90 border-[#26d9d0]/40'
+                  : 'glass-card border-white/10 hover:border-white/20'
                   }`}
               >
                 {/* Botón Cabecera de la Pregunta */}
@@ -106,8 +104,8 @@ export default function FAQ({ onNavigate }) {
                     {/* Número con tipografía mono */}
                     <span
                       className={`text-sm font-mono font-bold px-2.5 py-1 rounded-lg transition-colors shrink-0 ${isOpen
-                          ? 'bg-[#26d9d0]/20 text-[#26d9d0] border border-[#26d9d0]/30'
-                          : 'bg-white/05 text-[#8fa3b8] border border-white/05'
+                        ? 'bg-[#26d9d0]/20 text-[#26d9d0] border border-[#26d9d0]/30'
+                        : 'bg-white/05 text-[#8fa3b8] border border-white/05'
                         }`}
                     >
                       {item.numero}
@@ -131,8 +129,8 @@ export default function FAQ({ onNavigate }) {
                   {/* Icono de flecha giratoria */}
                   <div
                     className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen
-                        ? 'bg-[#26d9d0] text-[#050b14] rotate-180'
-                        : 'bg-white/05 text-[#8fa3b8] hover:text-[#f4f7fb]'
+                      ? 'bg-[#26d9d0] text-[#050b14] rotate-180'
+                      : 'bg-white/05 text-[#8fa3b8] hover:text-[#f4f7fb]'
                       }`}
                   >
                     <ChevronDown className="w-5 h-5" />
