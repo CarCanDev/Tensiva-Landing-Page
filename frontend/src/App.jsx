@@ -14,6 +14,7 @@ import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Chatbot from './components/Chatbot/Chatbot';
+import { ManifestoBanner, CommitmentBanner } from './components/TextBanners';
 
 export default function App() {
   const [selectedMotivo, setSelectedMotivo] = useState('Proyecto de ingeniería');
@@ -50,6 +51,9 @@ export default function App() {
         {/* Sección 3: Nuestras Soluciones (Martín - Completado) */}
         <Soluciones onNavigate={handleNavigate} />
 
+        {/* Banner de Texto: Manifiesto corporativo de ingeniería aplicada */}
+        <ManifestoBanner />
+
         {/* Sección 4: Plataforma CORDIA (Martín - Completado) */}
         <CordiaIntro onNavigate={handleNavigate} />
 
@@ -67,6 +71,9 @@ export default function App() {
 
         {/* Sección 9: Preguntas Frecuentes (Carlos - Completado) */}
         <FAQ onNavigate={handleNavigate} />
+
+        {/* Banner de Texto: Declaración de compromiso previo a contacto */}
+        <CommitmentBanner />
 
         {/* Sección 10: Formulario de Contacto (Carlos - Completado) */}
         <Contacto
