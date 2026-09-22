@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import TensivaLogo from './TensivaLogo';
+import tbordeado from '../assets/Tinclinadav1.svg';
 
 export default function Navbar({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +55,7 @@ export default function Navbar({ onNavigate }) {
             onClick={() => handleLinkClick('inicio')}
             className="flex items-center gap-3 group focus:outline-none cursor-pointer"
           >
-            <TensivaLogo className="w-11 h-14 sm:w-12 sm:h-16 group-hover:scale-105 transition-transform" />
+            <img src={tbordeado} alt="Tensiva" className="w-14 h-[4.5rem] sm:w-16 sm:h-20 object-contain group-hover:scale-105 transition-transform" draggable={false} />
             <div className="flex flex-col text-left">
               <span className="text-xl font-bold tracking-wider text-[#f4f7fb] group-hover:text-[#26d9d0] transition-colors">
                 TENSIVA

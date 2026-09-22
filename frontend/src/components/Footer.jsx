@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
-import TensivaLogo from './TensivaLogo';
+import icono3 from '../assets/Tinclinadav1.svg';
 
 export default function Footer({ onNavigate }) {
   const scrollToTop = () => {
@@ -24,7 +24,7 @@ export default function Footer({ onNavigate }) {
           {/* Columna 1 y 2: Identidad Tensiva */}
           <div className="lg:col-span-2 space-y-5">
             <div className="flex items-center gap-3">
-              <TensivaLogo className="w-12 h-16" />
+              <img src={icono3} alt="Tensiva" className="w-12 h-16 object-contain" draggable={false} />
               <div className="flex flex-col text-left">
                 <span className="text-xl font-bold tracking-wider text-[#f4f7fb]">
                   TENSIVA
