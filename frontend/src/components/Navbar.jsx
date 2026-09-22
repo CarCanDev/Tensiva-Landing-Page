@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import tbordeado from '../assets/Icono3.svg';
+import tbordeado from '../assets/Tinclinadav1.svg';
 
 export default function Navbar({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
-import icono3 from '../assets/Icono3.svg';
+import icono3 from '../assets/Tinclinadav1.svg';
 
 export default function Footer({ onNavigate }) {
   const scrollToTop = () => {
